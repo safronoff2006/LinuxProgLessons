@@ -1,4 +1,7 @@
 # Makefile for Hello World project
+.PHONY: all clean install uninstall
+
+all: hello
 
 hello: main.o hello.o
 	gcc -o hello main.o hello.o

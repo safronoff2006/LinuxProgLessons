@@ -3,7 +3,7 @@
 
 void print_hello (void)
 {
-	printf ("Hello World\n");
+	printf ("Hello Hell\n");
 	printf ("Goodbye World\n");
 }
 
