@@ -1,0 +1,8 @@
+# Makefile for environ
+
+putenv: putenv.c
+	gcc -o putenv putenv.c
+
+clean:
+	rm -f putenv
+
