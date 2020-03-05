@@ -1,4 +1,6 @@
-# Makefile for environ
+# Makefile for getenv
+
+all: getenv
 
 getenv: getenv.c
 	gcc -o getenv getenv.c

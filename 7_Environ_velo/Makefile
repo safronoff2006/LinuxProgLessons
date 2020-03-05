@@ -1,4 +1,5 @@
 # Makefile for environ
+all: environ
 
 environ: environ.c
 	gcc -o environ environ.c

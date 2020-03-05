@@ -1,5 +1,7 @@
 # Makefile for World project
 
+all: binary
+
 binary: main.o libworld.so
 	gcc -o binary main.o -L. -lworld -Wl,-rpath,.
 

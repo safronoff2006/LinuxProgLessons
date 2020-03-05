@@ -26,11 +26,16 @@ int main (int argc, char ** argv)
 		exit (1);
 	}
 	
+	printf("openclose: Open file '%s'\n", argv[1]);
+
 	if (close (fd) != 0)
 	{
 		fprintf (stderr, "Cannot close file (descriptor=%d)\n", fd);
 		exit (1);
 	}	
+
+
+
 	exit (0);
 }
 

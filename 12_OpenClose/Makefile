@@ -1,4 +1,6 @@
-# Makefile for environ
+# Makefile for openclose
+
+all: openclose
 
 openclose: openclose.c
 	gcc -o openclose openclose.c
