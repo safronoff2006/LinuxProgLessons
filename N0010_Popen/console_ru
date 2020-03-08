@@ -1,0 +1,15 @@
+sudo cp /lib/systemd/system/console-setup.service /lib/systemd/system/console-setup.original
+cat << EOF | sudo tee /lib/systemd/system/console-setup.service
+[Unit]
+Description=Set console font and keymap
+DefaultDependencies=no
+Documentation=man:loadkeys(1)
+After=console-screen.service kbd.service local-fs.target
+Before=system-getty.slice
+ConditionPathExists=/dev/tty0
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/setupcon --save
+EOF
