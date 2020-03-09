@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 #include <string.h>
 #include "N0006_Signal_ipc.h"
 
@@ -16,6 +17,7 @@ int signal_flag = FALSE;
 void sig_func(int signr) {
 	start_signalset();
 	signal_flag = TRUE;
+
 }
 
 void start_signalset() {

@@ -30,7 +30,7 @@ void draw_point (int fd, int x, int y)
 {
 	char ch = FG_CHAR;
 	lseek (fd, y * (N_COLS+1) + x, SEEK_SET);
-	write (fd, &ch, 1);
+	int unused __attribute__((unused)) = write (fd, &ch, 1);
 }
 
 void draw_hline (int fd, int y, int x1, int x2)
@@ -38,7 +38,7 @@ void draw_hline (int fd, int y, int x1, int x2)
 	size_t bytes_write = abs (x2-x1) + 1;
 	memset (buffer, FG_CHAR, bytes_write);
 	lseek (fd, y * (N_COLS+1) + N_MIN (x1, x2), SEEK_SET);
-	write (fd, buffer, bytes_write);
+	int unused __attribute__((unused)) = write (fd, buffer, bytes_write);
 }
 
 void draw_vline (int fd, int x, int y1, int y2)
