@@ -21,10 +21,6 @@ void sig_func(int signr) {
 
 }
 
-void message_for_proc(pid_t pid, int signum) {
-	kill(pid, signum);
-}
-
 void wait_for_syg() {
 	while (signal_flag == FALSE)
 		sigsuspend(&sig_null);
